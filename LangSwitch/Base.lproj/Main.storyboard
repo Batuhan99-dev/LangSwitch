@@ -103,7 +103,7 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign Up" cornerStyle="capsule">
+                                <buttonConfiguration key="configuration" style="plain" title="Sign in" cornerStyle="capsule">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
@@ -131,6 +131,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="d6Q-IY-zUl" id="ScW-ES-yab"/>
                         <outlet property="passwordTextField" destination="dgP-YT-yva" id="6A6-4C-K2k"/>
+                        <segue destination="zbb-5o-eWI" kind="show" identifier="signinTo" id="Dhd-5W-o8F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="skM-hR-Z9T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -190,11 +191,28 @@
                     <connections>
                         <outlet property="emailTextField" destination="3LE-CH-iWZ" id="dYM-dE-ht4"/>
                         <outlet property="passwordTextField" destination="Ybg-oF-Hyg" id="K6Q-mx-TaG"/>
+                        <segue destination="zbb-5o-eWI" kind="show" identifier="loginTo" id="cKQ-UF-tnn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gc-Ay-YgM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2902.3255813953488" y="-238.84120171673823"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UMC-qg-eCD">
+            <objects>
+                <viewController id="zbb-5o-eWI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zJ4-Gy-0nj">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Aec-NJ-mwK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i5L-qK-SlF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSy-d9-RRp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4012" y="8"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ddh-Bb-rRD">
@@ -215,6 +233,9 @@
             <point key="canvasLocation" x="1024.1860465116279" y="1.2875536480686696"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dhd-5W-o8F"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
