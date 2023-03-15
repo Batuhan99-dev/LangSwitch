@@ -54,7 +54,8 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="VCd-Lx-FGR" kind="show" id="JJM-gh-s3G"/>
+                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5V-Lb-BgT"/>
+                                    <segue destination="VCd-Lx-FGR" kind="show" identifier="" id="JJM-gh-s3G"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,7 +82,7 @@
         <!--Signin Screen-->
         <scene sceneID="pkb-qT-Ml3">
             <objects>
-                <viewController id="VCd-Lx-FGR" customClass="SigninScreen" customModule="LangSwitch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Signin" id="VCd-Lx-FGR" customClass="SigninScreen" customModule="LangSwitch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pFa-A1-vfP">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,7 +110,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="signinPressed:" destination="VCd-Lx-FGR" eventType="touchUpInside" id="j0b-eS-g1d"/>
+                                    <action selector="signinPressed:" destination="VCd-Lx-FGR" eventType="touchUpInside" id="RZV-vr-ToL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -201,10 +202,19 @@
         <!--View Controller-->
         <scene sceneID="UMC-qg-eCD">
             <objects>
-                <viewController id="zbb-5o-eWI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="translate" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zbb-5o-eWI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zJ4-Gy-0nj">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LANGSWİTCH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfq-4H-Tpe">
+                                <rect key="frame" x="194" y="456" width="109" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Aec-NJ-mwK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>

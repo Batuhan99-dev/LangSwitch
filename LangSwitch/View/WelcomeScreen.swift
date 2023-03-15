@@ -8,6 +8,12 @@
 import UIKit
 
 class WelcomeScreen: UIViewController {
+    
+    
+    @IBAction func signUp(_ sender: UIButton) {
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
