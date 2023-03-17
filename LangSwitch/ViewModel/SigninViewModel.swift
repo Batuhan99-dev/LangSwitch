@@ -7,26 +7,25 @@
 
 import Foundation
 import Firebase
-import UIKit
 
-final class SigninViewModel {
-//    var sigininscreen = SigninScreen()
-   
+final class SigninViewModel: UIViewController {
     
-    func creatUser(email: String, password: String, completion: @escaping(Bool)-> Void) {
+    //MARK: - Creat User With Firebase
+    
+    func creatUser(email: String, password: String, completion: @escaping(Bool, Error? )-> (Void)) {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                   if let e = error {
-                       print(e)
-                       completion(false)
-                   } else {
-                    completion(true)
-                   }
-               }
+            if error != nil {
+                
+                completion(false, error)
+            }else {
+                completion(true, nil)
+            }
+        }
     }
+    
+    
+    
+    
+}
 
-    
-    
-        
-    }
-    
 
